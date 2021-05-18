@@ -23,7 +23,7 @@ from sendemail import views as sendmeil
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('repo/',include('todoapp.urls')),
-    path('items/',views.index,name='index'),
+    path('',views.index,name='index'),
     path('items-details/<int:pk>',views.ItemDetail.as_view(),name='item_details'),
     path('create/', views.create,name='item_create'),  
     path('edit/<int:id>', views.edit,name='item_edit'),  
